@@ -1,12 +1,9 @@
-# ⚽ Futebol API — Gerenciamento de Mensalistas
-
+#Futebol API — Gerenciamento de Mensalistas
 API REST em Java com Spring Boot para gerenciar pagamentos de mensalistas em jogos de futebol.
-
 ---
 
-## 🗂️ Estrutura do Projeto (MVC)
+##Estrutura do Projeto (MVC)
 
-```
 futebol-api/
 ├── pom.xml
 └── src/main/java/com/futebol/
@@ -24,11 +21,9 @@ futebol-api/
         ├── JogadorController.java        ← Endpoints REST
         ├── PagamentoController.java
         └── GlobalExceptionHandler.java   ← Tratamento de erros
-```
-
 ---
 
-## ▶️ Como executar
+## Como executar
 
 ### Pré-requisitos
 - Java 17+
@@ -38,16 +33,14 @@ futebol-api/
 ```bash
 # Na pasta raiz do projeto:
 mvn spring-boot:run
-```
 
 A aplicação sobe em `http://localhost:8080`.
 
 > Console H2 (banco em memória): `http://localhost:8080/h2-console`  
 > JDBC URL: `jdbc:h2:mem:futebolddb` | User: `sa` | Password: *(vazio)*
-
 ---
 
-## 📡 Endpoints da API
+## Endpoints da API
 
 ### Jogadores — `/jogadores`
 
@@ -95,7 +88,7 @@ A aplicação sobe em `http://localhost:8080`.
 
 ---
 
-## 🗄️ Modelo de Dados
+## Modelo de Dados
 
 ```
 jogador                          pagamento
@@ -111,7 +104,7 @@ Relacionamento: **Um jogador → Muitos pagamentos** (`@OneToMany` / `@ManyToOne
 
 ---
 
-## 🔧 Anotações JPA utilizadas
+## Anotações JPA utilizadas
 
 | Anotação         | Onde              | Finalidade                                     |
 |------------------|-------------------|------------------------------------------------|
@@ -125,7 +118,7 @@ Relacionamento: **Um jogador → Muitos pagamentos** (`@OneToMany` / `@ManyToOne
 
 ---
 
-## 💡 Uso com MySQL (produção)
+## Uso com MySQL (produção)
 
 Descomente no `application.properties` e ajuste usuário/senha:
 
